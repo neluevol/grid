@@ -1,24 +1,84 @@
-/* Denna fil skall innehålla din CSS kod */
-body {
-    background-color:rgb(168, 47, 255);
+.gridwrapper {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+
+    grid-template-areas:
+        "he he he he he"
+        "na na na na as"
+        "a1 a1 a1 a1 as"
+        "a2 a2 a3 a3 as"
+        "a4 a5 se a6 as"
+        "a7 a7 a7 a7 as"
+        "a8 a8 a8 a8 as"
+        "fo fo fo fo fo"
+    ;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-gap: 2px;
 }
 
-h1 {
-    width:75%;
-    height:200px;
-    /*border: solid 2px green;*/
-    border-style: solid;
-    border-width: 2px;
-    border-color: green;
-    background-color: rgba(255,0,0,0.8);
+.header{
+    grid-area he;
+    background: pink;
 }
 
-#blockis {
-    background: hotpink;
-    width:50%;
+.nav{
+    grid-area na;
+    background-color: #da7676;
 }
 
-span {
-    background-color: rgb(255,232,123);
-    
+.article1{
+    grid-area: a1;
+    background-color: #76ec52;
+}
+
+.article2{
+    grid-area: a2;
+    background-color: #52d5ec;
+}
+
+.article3{
+    grid-area: a3;
+    background-color: #da7676;
+}
+
+.article4{
+    grid-area: a4;
+    background-color: #027b80;
+}
+
+.article5{
+    grid-area: a5;
+    background-color: #72a7c5;
+}
+
+.article6{
+    grid-area: a6;
+    background-color: #632a99;
+}
+
+.article7{
+    grid-area: a7;
+    background-color: #72a7c5;
+}
+
+.article8{
+    grid-area: a8;
+    background-color: firebrick;
+}
+
+.footer{
+    grid-area: fo;
+    background-color: #810192;
+}
+
+.aside{
+    grid-area: as;
+    background-color: goldenrod;
+}
+
+.innergridwrapper{
+    grid-area: se;
+    background-color: seagreen;
 }
